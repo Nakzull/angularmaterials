@@ -31,4 +31,20 @@ public cars: Array<Car>;
    GetList(): Array<Car>{
     return this.cars;
    }
+   
+   CarExistByNr(nr: number | null): boolean {
+    if (nr === null) {
+      return false;
+    }
+    return this.cars.some((car) => car.nr === nr);
+  }
+
+   AddCar(car: Car): void {
+    this.cars.push(car);
+  }
+
+  UpdateCar(car: Car): void {
+    const index = this.cars.findIndex((c) => c.nr === car.nr);
+    this.cars[index] = car;
+  }
 }
