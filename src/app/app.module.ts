@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import { MorsePipe } from './morse.pipe'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MorsePipe
   ],
   imports: [
     BrowserModule,

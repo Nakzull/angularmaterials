@@ -4,6 +4,7 @@ import { Car } from './car';
 import { CarService } from './car.service';
 import {MatTable} from '@angular/material/table';
 import {FormControl, Validators} from '@angular/forms';
+import { MorsePipe } from './morse.pipe';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import {FormControl, Validators} from '@angular/forms';
 export class AppComponent {
   title = 'angularmaterials';
 
+  text: string = "fed abe";
   
   car$: Observable<Car> | undefined;
   cars$: Observable<Car[]>;
